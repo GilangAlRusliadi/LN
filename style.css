@@ -135,3 +135,27 @@ body::after {
     background-position: center center;
   }
 }
+
+/* Styling untuk link (agar mencakup h1 dan img) */
+.link {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect untuk seluruh elemen di dalam link */
+.link:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px 10px rgba(255, 255, 255, 0.5); /* Shadow halus */
+  border-radius: 10px; /* Menghaluskan sudut */
+}
+
+/* Styling untuk gambar */
+.link img {
+  width: 150px;
+  height: 150px;
+}
+

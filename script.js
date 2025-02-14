@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch("data.json") // Pastikan file JSON bernama data.json dan ada di satu folder dengan script.js
         .then(response => response.json())
         .then(data => {
-            data.light_novels.sort((a, b) => a.title.localeCompare(b.title)); // Mengurutkan berdasarkan title
+            // data.light_novels.sort((a, b) => a.title.localeCompare(b.title)); // Mengurutkan berdasarkan title
             
             const container = document.querySelector(".icons");
             container.innerHTML = "";

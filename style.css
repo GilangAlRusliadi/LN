@@ -65,7 +65,7 @@ body::after {
 .container {
   text-align: center;
   background: rgba(0, 0, 0, 0.5);
-  padding: 10%;
+  padding: 10vh 5%;
   border-radius: 10px;
   box-sizing: border-box;
   width: 100%;

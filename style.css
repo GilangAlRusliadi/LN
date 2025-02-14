@@ -1,0 +1,129 @@
+/* Reset dasar */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: auto;
+}
+
+/* Background dengan transisi fade */
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: opacity 2s ease-in-out;
+}
+
+/* Background dinamis */
+body::before {
+  background-image: url('background/cover 1.webp');
+  background-position: center 59%;
+  opacity: 1;
+  animation: fadeInOut1 10s infinite alternate;
+}
+
+body::after {
+  background-image: url('background/cover 2.webp');
+  background-position: center 5%;
+  opacity: 0;
+  animation: fadeInOut2 10s infinite alternate;
+}
+
+/* Animasi fade */
+@keyframes fadeInOut1 {
+  0%, 45% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@keyframes fadeInOut2 {
+  0%, 45% { opacity: 0; }
+  50%, 100% { opacity: 1; }
+}
+
+/* Responsif untuk layar landscape */
+@media (min-aspect-ratio: 4/3) {
+  body::before,
+  body::after {
+    background-size: cover;
+  }
+}
+
+/* Container styling */
+.container {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10%;
+  border-radius: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+/* Ikon */
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.icon {
+  text-decoration: none;
+  color: #ffffff;
+  text-align: center;
+  transition: transform 0.3s;
+  flex: 1 1 120px;
+  max-width: 150px;
+}
+
+.icon img {
+  width: 105px;
+  height: 150px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.icon span {
+  display: block;
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+.icon:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+.icon:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 600px) {
+  .icons {
+    gap: 15px;
+  }
+  .icon img {
+    width: 54px;
+    height: 75px;
+  }
+  .icon span {
+    font-size: 1em;
+  }
+}

@@ -23,6 +23,7 @@ body::after {
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   transition: opacity 2s ease-in-out;
 }
 

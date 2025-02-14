@@ -128,3 +128,10 @@ body::after {
     font-size: 1em;
   }
 }
+
+@media (max-width: 768px) {
+  body {
+    background-attachment: fixed !important;
+    background-position: center center;
+  }
+}
